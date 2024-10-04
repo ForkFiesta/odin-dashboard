@@ -1,22 +1,24 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic);
+
+
+
 *{
     padding: 0;
     margin:0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Lato", Arial, Helvetica, sans-serif;
 }
 
-.container{
-    height:100vh;
+body{
+    height: 100vh;
+}
+
+/* contains entire content */
+.container{     
+    max-height:100vh;
     width: 100vw;
 }
 
-
-.grid-container{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr) repeat(1,4fr);
-    grid-template-rows: repeat(18, minmax(50px, 1fr));
-    gap:20px
-    
-}
+/* nav bar styling */
 
 .nav-bar{
     display: flex;
@@ -89,10 +91,156 @@
     max-width: 100%;
 }
 
-.sidebar {
-    grid-area: 2 / 1 / -2 / 1;
+/* Contains everything below Navbar */
+
+.main{
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(1, 200px) repeat(1, 4fr);
 }
 
-.dashboard-scoping-bar{
-    grid-area: 2/ 2/ 3/ -1;
+
+
+
+
+/* side bar styling */
+
+
+.sidebar {
+    /* grid-area: 1 / 1 / -1 / 1; */
+    display:grid;
 }
+
+.sidebar{
+    color: white;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: baseline;
+    background-color: #172969;
+    grid-row-end: -1;
+}
+
+.sidebar h3 {
+    /* text-align: left; */
+    margin-bottom: 20px;
+}
+
+.sidebar-menu {
+    font-size: .8em;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+    padding-left: 20px;
+    list-style-type: none;
+}
+
+.cat1{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+    list-style-type: none;
+
+}
+.cat2{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+    list-style-type: none;
+
+}
+.cat3{
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+    list-style-type: none;
+
+}
+
+
+/* Dash Container contains everything in the dash board component */
+
+.dash-container {
+    display: grid;
+    grid-template-rows: repeat(1, 60px) repeat(1, 6fr);
+}
+
+.dashboard-scoping-bar {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.dash-scope-1{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-left: 20px;
+}
+.dash-scope-2{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-right: 20px;
+    align-items: center;
+}
+
+
+.card-display{
+    background-color: #eff4fa;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(2, 1fr); */
+    gap:25px;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    /* height: 200px;
+    width: 300px; */
+    box-shadow: 1px 1px 5px;
+    /* margin:20px; */
+    width: 300px;
+    height: fit-content;
+
+}
+
+.card-content img {
+    max-width: 100%;
+    margin: 0;
+}
+
+.widecard{
+    width: 600px;
+    grid-column: span 2;
+    
+}
+
+.add-tool-btn button {
+    padding:5px;
+    background-color: #172969;
+    color: #eff4fa;
+    border: none;
+    outline: none;
+
+}
+
+
+a.only-link {
+    text-decoration: none;
+    color: white;
+}
+
+li.selected{
+    color:aqua;
+}
+
+footer{
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+
