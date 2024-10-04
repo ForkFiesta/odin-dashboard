@@ -5,11 +5,15 @@
 }
 
 .container{
-    display: grid;
-    grid-template-columns: 1fr, 4fr;
-    grid-template-rows: repeat(18, 1fr);
     height:100vh;
     width: 100vw;
+}
+
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) repeat(1,4fr);
+    grid-template-rows: repeat(18, minmax(50px, 1fr));
     gap:20px
     
 }
@@ -85,4 +89,10 @@
     max-width: 100%;
 }
 
+.sidebar {
+    grid-area: 2 / 1 / -2 / 1;
+}
 
+.dashboard-scoping-bar{
+    grid-area: 2/ 2/ 3/ -1;
+}
